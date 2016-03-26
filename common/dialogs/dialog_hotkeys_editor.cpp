@@ -84,3 +84,7 @@ void HOTKEYS_EDITOR_DIALOG::ResetClicked( wxCommandEvent& aEvent )
 {
     m_hotkeyListCtrl->TransferDataToControl();
 }
+
+void HOTKEYS_EDITOR_DIALOG::DefaultsClicked( wxCommandEvent& aEvent )
+{
+}
