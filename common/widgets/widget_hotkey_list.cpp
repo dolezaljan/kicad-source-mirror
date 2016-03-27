@@ -32,9 +32,6 @@
 #include <draw_frame.h>
 #include <dialog_shim.h>
 
-// allows accessibility of default hotkey values
-#include <hotkeys.h>
-
 
 /**
  * Minimum width of the hotkey column
@@ -575,35 +572,6 @@ void WIDGET_HOTKEY_LIST::InstallOnPanel( wxPanel* aPanel )
 
     sizer->Add( this, 1, wxALL | wxEXPAND, 0 );
     aPanel->SetSizer( sizer );
-}
-
-
-bool WIDGET_HOTKEY_LIST::TransferDefaultsToControl()
-{
-    Freeze();
-
-    for( wxTreeListItem item = GetFirstItem(); item.IsOk(); item = GetNextItem( item ) )
-    {
-        WIDGET_HOTKEY_CLIENT_DATA* hkdata = GetHKClientData( item );
-        if( hkdata == NULL)
-            continue;
-
-        EDA_HOTKEY& hk = hkdata->GetHotkey();
-
-        for( const EDA_HOTKEY* def_hk = default_values_Hotkey_List;
-            def_hk->m_Idcommand != HK_NOT_FOUND || def_hk->m_KeyCode != WXK_NONE; def_hk++ )
-        {
-            if( hk.m_Idcommand == def_hk->m_Idcommand && hk.m_KeyCode != def_hk->m_KeyCode )
-            {
-                hk.m_KeyCode = def_hk->m_KeyCode;
-            }
-        }
-    }
-
-    UpdateFromClientData();
-    Thaw();
-
-    return true;
 }
 
 
