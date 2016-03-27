@@ -87,4 +87,5 @@ void HOTKEYS_EDITOR_DIALOG::ResetClicked( wxCommandEvent& aEvent )
 
 void HOTKEYS_EDITOR_DIALOG::DefaultsClicked( wxCommandEvent& aEvent )
 {
+    m_hotkeyListCtrl->TransferDefaultsToControl();
 }
