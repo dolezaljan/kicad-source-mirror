@@ -51,6 +51,7 @@
  *      an item is currently edited.  This can be usefull if the new function cannot be
  *      executed while an item is currently being edited
  *  ( For example, one cannot start a new wire when a component is moving.)
+ *  add the EDA_HOTKEY entry in the default_values_Hotkey_List list
  *
  *  Note: If an hotkey is a special key, be sure the corresponding wxWidget keycode (WXK_XXXX)
  *  is handled in the hotkey_name_descr s_Hotkey_Name_List list (see hotkeys_basic.cpp)
@@ -89,6 +90,26 @@ EDA_HOTKEY* gerbviewHotkeyList[] = {
     NULL
 };
 
+
+// List of copies of all hotkey descriptors for default values to be available
+EDA_HOTKEY default_values_Hotkey_List[] = {
+    HkZoomAuto,
+    HkZoomCenter,
+    HkZoomRedraw,
+    HkZoomOut,
+    HkZoomIn,
+    HkHelp,
+    HkSwitchUnits,
+    HkResetLocalCoord,
+    HkLinesDisplayMode,
+    HkFlashedDisplayMode,
+    HkPolygonDisplayMode,
+    HkNegativeObjDisplayMode,
+    HkDCodesDisplayMode,
+    HkSwitch2NextCopperLayer,
+    HkSwitch2PreviousCopperLayer,
+    EDA_HOTKEY( NULL, HK_NOT_FOUND, WXK_NONE )
+};
 
 // list of sections and corresponding hotkey list for GerbView (used to create an hotkey
 // config file)
