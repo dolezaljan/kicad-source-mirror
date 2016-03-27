@@ -65,7 +65,6 @@
  * add the HkMyNewEntry pointer in the schematic_Hotkey_List list or the
  * libEdit_Hotkey_List list or common_Hotkey_List if the same command is
  * added both in Eeschema and libedit)
- * add the EDA_HOTKEY entry in the default_values_Hotkey_List list
  * Add the new code in the switch in OnHotKey() function.
  * when the variable itemInEdit is true, an item is currently edited.
  * This can be useful if the new function cannot be executed while an item is
@@ -319,67 +318,6 @@ static EDA_HOTKEY* libEdit_Hotkey_List[] =
 static EDA_HOTKEY* viewlib_Hotkey_List[] =
 {
     NULL
-};
-
-// List of copies of all hotkey descriptors for default values to be available
-EDA_HOTKEY default_values_Hotkey_List[] = {
-    HkZoomAuto,
-    HkZoomCenter,
-    HkZoomRedraw,
-    HkZoomIn,
-    HkZoomOut,
-    HkHelp,
-    HkResetLocalCoord,
-    HkLeaveSheet,
-    HkUndo,
-    HkRedo,
-    HkMouseLeftClick,
-    HkMouseLeftDClick,
-    HkBeginWire,
-    HkBeginBus,
-    HkEndLineWireBus,
-    HkAddLabel,
-    HkAddHierarchicalLabel,
-    HkAddGlobalLabel,
-    HkAddJunction,
-    HkAddComponent,
-    HkAddPower,
-    HkAddNoConn,
-    HkAddHierSheet,
-    HkAddBusEntry,
-    HkAddWireEntry,
-    HkAddGraphicPolyLine,
-    HkAddGraphicText,
-    HkMirrorY,
-    HkMirrorX,
-    HkOrientNormalComponent,
-    HkRotate,
-    HkEdit,
-    HkEditComponentValue,
-    HkEditComponentReference,
-    HkEditComponentFootprint,
-    HkEditComponentWithLibedit,
-    HkMove,
-    HkCopyComponentOrText,
-    HkDrag,
-    HkSaveBlock,
-    HkMove2Drag,
-    HkInsert,
-    HkDelete,
-    HkDeleteNode,
-    HkFindItem,
-    HkFindNextItem,
-    HkFindReplace,
-    HkFindNextDrcMarker,
-    HkCreatePin,
-    HkInsertPin,
-    HkMoveLibItem,
-    HkSaveLib,
-    HkSaveSchematic,
-    HkLoadSchematic,
-    HkAutoplaceFields,
-    HkUpdatePcbFromSch,
-    EDA_HOTKEY( NULL, HK_NOT_FOUND, WXK_NONE )
 };
 
 // Keyword Identifiers (tags) in key code configuration file (section names)

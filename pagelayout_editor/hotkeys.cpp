@@ -54,7 +54,6 @@
  * 'Default key value' is the default hotkey for this command.
  * Can be overrided by the user hotkey list
  * Add the 'HkMyNewEntry' pointer in the  s_PlEditor_Hotkey_List list
- * add the EDA_HOTKEY entry in the default_values_Hotkey_List list
  * Add the new code in the switch in OnHotKey() function.
  *
  *  Note: If an hotkey is a special key, be sure the corresponding wxWidget keycode (WXK_XXXX)
@@ -109,27 +108,6 @@ EDA_HOTKEY* s_PlEditor_Hotkey_List[] =
     &HkPlaceItem,
     &HkDeleteItem,
     NULL
-};
-
-// List of copies of all hotkey descriptors for default values to be available
-EDA_HOTKEY default_values_Hotkey_List[] = {
-    HkMouseLeftClick,
-    HkMouseLeftDClick,
-    HkResetLocalCoord,
-    HkZoomAuto,
-    HkZoomCenter,
-    HkZoomRedraw,
-    HkZoomOut,
-    HkZoomIn,
-    HkHelp,
-    HkMoveItem,
-    HkPlaceItem,
-    HkMoveStartPoint,
-    HkMoveEndPoint,
-    HkDeleteItem,
-    HkUndo,
-    HkRedo,
-    EDA_HOTKEY( NULL, HK_NOT_FOUND, WXK_NONE )
 };
 
 // Titles for hotkey editor and hotkey display

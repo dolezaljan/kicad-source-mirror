@@ -165,24 +165,6 @@ EDA_HOTKEY* common_Hotkey_List[] =
     NULL
 };
 
-// List of copies of all hotkey descriptors for default values to be available
-EDA_HOTKEY default_values_Hotkey_List[] = {
-    HkHelp,
-    HkLoadPrj,
-    HkSavePrj,
-    HkNewProject,
-    HkNewPrjFromTemplate,
-    HkRunEeschema,
-    HkRunLibedit,
-    HkRunPcbnew,
-    HkRunModedit,
-    HkRunGerbview,
-    HkRunBm2Cmp,
-    HkRunPcbCalc,
-    HkRunPleditor,
-    EDA_HOTKEY( NULL, HK_NOT_FOUND, WXK_NONE )
-};
-
 // list of sections and corresponding hotkey list for Kicad
 // (used to create an hotkey config file, and edit hotkeys )
 // here we have only one section.

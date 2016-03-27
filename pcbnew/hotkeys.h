@@ -125,9 +125,6 @@ enum hotkey_id_commnand {
     HK_ZONE_REMOVE_FILLED
 };
 
-// Full list of hotkey descriptor objects for default values to be available
-extern EDA_HOTKEY default_values_Hotkey_List[];
-
 // Full list of hotkey descriptors for board editor and footprint editor
 extern struct EDA_HOTKEY_CONFIG g_Pcbnew_Editor_Hokeys_Descr[];
 
